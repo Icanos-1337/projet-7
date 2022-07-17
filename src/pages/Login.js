@@ -11,10 +11,6 @@ import * as Yup from 'yup';
 // loader spinner
 import Loader from 'react-loader-spinner';
 
-// auth, redux
-
-import {connect} from 'react-redux';
-import {loginUser} from './../auth/actions/userActions';
 import {useNavigate} from 'react-router-dom';
 
 import {FiMail, FiLock} from 'react-icons/fi';
