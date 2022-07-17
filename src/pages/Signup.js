@@ -14,8 +14,17 @@ import Loader from 'react-loader-spinner';
 import {useNavigate} from 'react-router-dom';
 
 import {FiMail, FiLock, FiUser, FiCalendar} from 'react-icons/fi';
+import { signup } from '../Api';
 
-const Signup = ({signupUser}) => {
+const Signup = () => {
+    const signupUser = (values) => {
+        signup(values).then(() => {
+            console.log("Inscruption reussi")
+        })
+        .catch((err) => {
+            console.log("error insc", err)
+        })
+    }
     const history = useNavigate();
     return (
        <div>
@@ -40,11 +49,7 @@ const Signup = ({signupUser}) => {
                         repeatPassword: Yup.string().required("Required").oneOf([Yup.ref("password")], "Passwords must match")
                     })
                 }
-                onSubmit={(values, { setSubmitting, setFieldError }) => {
-                    console.log(values);
-                    signupUser(values, history, setFieldError, setSubmitting)
-                }}
-            >
+                onSubmit={signupUser} >
                 {({isSubmitting}) => (
                     <Form>
                         <TextInput 
@@ -108,4 +113,4 @@ const Signup = ({signupUser}) => {
     );
 };
 
-export default connect(null, {signupUser}) (Signup);
+export default Signup;

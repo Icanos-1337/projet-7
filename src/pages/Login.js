@@ -15,7 +15,17 @@ import {useNavigate} from 'react-router-dom';
 
 import {FiMail, FiLock} from 'react-icons/fi';
 
-const Login = ({loginUser}) => {
+import { login } from '../Api';
+
+const Login = () => {
+    const loginUser = (values) => {
+       login(values).then(() => {
+        console.log("Réussi")
+       })
+       .catch((err) => {
+            console.log("error de co", err)
+       });
+    }
     const history = useNavigate();
     return (
        <div>
@@ -34,11 +44,7 @@ const Login = ({loginUser}) => {
                         password: Yup.string().min(8, "Password is too short").max(30, "Password is too long").required("Required"),
                     })
                 }
-                onSubmit={(values, {setSubmitting, setFieldError}) => {
-                    console.log(values);
-                    loginUser(values, history,setFieldError, setSubmitting);
-                }}
-            >
+                onSubmit={loginUser} >
                 {({isSubmitting}) => (
                     <Form>
                         <TextInput 
@@ -80,4 +86,4 @@ const Login = ({loginUser}) => {
     );
 };
 
-export default connect(null, {loginUser}) (Login);
+export default Login;
