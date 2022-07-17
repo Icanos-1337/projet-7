@@ -50,6 +50,16 @@ export const Avatar = styled.div`
     margin: auto;
 `;
 
+export const Avatar2 = styled.div`
+    width: 29%;
+    height: 63px;
+    border-radius: 50px;
+    background-image: url(${props => props.image});
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+`;
+
 export const AvatarProfile = styled.div`
     width: 36%;
     height: 200px;

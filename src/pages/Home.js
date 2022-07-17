@@ -1,4 +1,4 @@
-import {StyledTitle, StyledSubTitle, Avatar, StyledButton, ButtonGroup} from './../components/Styles';
+import {StyledTitle, StyledSubTitle, Avatar2, StyledButton, ButtonGroup} from './../components/Styles';
 
 // logo
 
@@ -18,7 +18,7 @@ const Home = () => {
                 display: "flex",
                 justifyContent: "flex-start"
             }}>
-                <Avatar image={Logo} />
+                <Avatar2 image={Logo} />
             </div>
             <StyledTitle size={65}>
                 Welcome to Groupomania
