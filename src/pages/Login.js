@@ -18,12 +18,18 @@ import {FiMail, FiLock} from 'react-icons/fi';
 import { login } from '../Api';
 
 const Login = () => {
+    const errors = {
+        email: "email invalide",
+        password: "mot de passe"
+    }
     const loginUser = (values) => {
        login(values).then(() => {
-        console.log("Réussi")
+        console.log("Connexion Réussi")
+        alert("Connexion..")
        })
        .catch((err) => {
-            console.log("error de co", err)
+        alert("Erreur de connexion")
+            console.log("Erreur de connexion", err)
        });
     }
     const history = useNavigate();
@@ -63,6 +69,7 @@ const Login = () => {
                             icon={<FiLock />}
                         
                         />
+                        
                     
                         <ButtonGroup>
                             

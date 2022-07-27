@@ -26,7 +26,7 @@ export const StyledContainer = styled.div`
 export const StyledTitle = styled.h2`
     font-size: ${(props) => props.size}px;
     text-align: center;
-    color: ${(props) => props.color ? props.color : colors.secondary};
+    color: ${(props) => props.color ? props.color : colors.tertiaire};
     padding: 5px;
     margin-bottom: 20px;
     margin-top: 35px;
@@ -35,7 +35,7 @@ export const StyledTitle = styled.h2`
 export const StyledSubTitle = styled.p`
     font-size: ${(props) => props.size}px;
     text-align: center;
-    color: ${(props) => props.color ? props.color : colors.secondary};
+    color: ${(props) => props.color ? props.color : colors.tertiaire};
     padding: 5px;
     margin-bottom: 25px;
 `;
@@ -51,7 +51,7 @@ export const Avatar = styled.div`
 `;
 
 export const Avatar2 = styled.div`
-    width: 29%;
+    width: 20%;
     height: 63px;
     border-radius: 50px;
     background-image: url(${props => props.image});
@@ -75,9 +75,9 @@ export const StyledButton = styled(Link)`
     width: 150px;
     background-color: transparent;
     font-size: 16px;
-    border: 3px solid ${colors.secondary};
+    border: 3px solid ${colors.tertiaire};
     border-radius: 25px;
-    color: ${colors.secondary};
+    color: ${colors.tertiaire};
     text-align: center;
     transition: ease-in-out 0.3s;
     text-decoration: none;

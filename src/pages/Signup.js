@@ -20,9 +20,11 @@ const Signup = () => {
     const signupUser = (values) => {
         signup(values).then(() => {
             console.log("Inscruption reussi")
+            alert("Connexion..")
         })
         .catch((err) => {
-            console.log("error insc", err)
+            alert("Erreur d'inscription")
+            console.log("Erreur d'inscription", err)
         })
     }
     const history = useNavigate();

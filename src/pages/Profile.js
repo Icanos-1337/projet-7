@@ -20,17 +20,17 @@ const Profile = () => {
             }}>
                 <AvatarProfile image={Logo} />
             </div>
-            <StyledFormArea bg={colors.tertiaire}>
-                <StyledTitle color={colors.white}size={50}>
+            <StyledFormArea bg={colors.white}>
+                <StyledTitle color={colors.primary}size={50}>
                     Welcome, User
                 </StyledTitle>
 
-                <StyledSubTitle color={colors.white}size={20}>
+                <StyledSubTitle color={colors.tertiaire}size={20}>
                     Feel free to explore our page
                 </StyledSubTitle>
 
                 <ButtonGroup>
-                    <StyledButton to="#">Logout</StyledButton>
+                    <StyledButton to="Home">Logout</StyledButton>
                 </ButtonGroup>
             </StyledFormArea>
             
